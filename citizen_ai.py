@@ -27,4 +27,4 @@ def chat_with_ai(prompt):
 
 # Launch Gradio app
 interface = gr.Interface(fn=chat_with_ai, inputs="text", outputs="text", title="Citizen AI Chatbot")
-interface.launch()
+interface.launch(share=True)
