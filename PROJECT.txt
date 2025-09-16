@@ -1,0 +1,131 @@
+CITZEN  AI:INTELLIGENT  CITIZEN ENGAGEMENT  PLATFORM
+PROJECT  DOCUMENTATION
+1.INTRODUCTION:
+
+PROJECT  TITLE:CITIZEN  AI
+TEAM MEMBER:M.AARTHI
+TEAM  MEMBER:P.KIRUTHTHIKA
+TEAM  MEMBER:S.SATHYA
+TEAM  MEMBER:B.AKSHAYA
+2.PROJECT  OVERVIEW:
+
+PURPOSE:
+
+The  purpose  of  CITIZEN AI  is to empower individuals and communities to live smater,healthier,and more sustainable lives through personalized,AI-driven guidance.By leveraging real-time data and intelligent insights,Citizen AI helps user optimize daily activities-such as energy use,water conservation, mobility,and waste reduction-while encouraging eco-friendly habits through tailored tips, remainders,and support.
+for local communities and organizations, Citizen, AI acts as a callobrative tool, providing actionable insights, trend analysis,and summaries of complex information to drive informed decision-making and collective impact. Ultimately, Citizen AI bridges techonology, personal well-being,and community engagement to create more connected,efficient,and resilient socities.
+FEATURES:
+
+CONVERSATIONAL INTERFACE
+
+key points:Natural language interaction
+Functionality:Allows citizens to ask questions,get updates,and receive personalized guidance in plain,everyday language.
+POLICY SUMMARIZATION
+
+key point:Simplified policy understanding
+Functionality:Converts lengthy government or community_related documents into clear,concise,and actionable summaries for citizens.
+RESOURCE FORECASTING
+Key point:predictive insights for daily living
+Functionality:Helps citizens anticiptate their energy,water,and resource usage by analysing historical and real_time data,enabling smarter personal planning.
+ECO-TIP GENERATOR
+
+key point:personalized sustainability advice 
+Functionality:provides tailored tips and daily recommendation for eco-friendly habits,such as reducing waste,saving energy,and supporting local sustainabiliy.
+CITIZEN FEEDBACK LOOP
+
+Key point:Empowering community voice 
+Functionality:Enables residents to share feedback,report issues,and participate in surveys-helping shape local decisions and improve services
+.
+ GOAL &  PROGRESS TRACKING
+
+Key point:Personal sustainability journey 
+Functionality:Projects individual or household goals(like energy saving or waste reduction) and tracks progress with easy_to_read performance indicators.
+ANOMALY DETECTION
+
+Key point:Early alerts for personal safety & efficiency
+Functionality:Detects unusual patterns in household or personal usage(e.g., unexpected energy spikes,water leaks)and alerts citizen to take action.
+MULTIMODAL INPUT SUPPORT
+
+Key point:Flexible data handling 
+Functionality:Allows users to upload bills,documents,or data(text,PDFs,CSVs)for personalized analysis, insights,and recommendations.
+
+CITIZEN DASHBOARD(STREAMLIT OR GRADIO UI)
+
+Key point:User_friendly personal hub 
+Funcationality:Offers and intuitive dashboard where citizens can you view their data,get real_time tips,track progress,and interact with the AI assistant.
+3.ARCHITECTURE:
+
+The frontend is built with streamlit,offering an interactive web UI with mutiple pages inicluding dashboards, citizen feedback forms,policy simulations,AI_driven Q&A,data visualizations, and report viewers. Navigation is handled through a sidebar using the streamlit_option_menu library. Each page is modularized for scalability and ease of use.
+
+BACKEND(FASTAPI):
+
+FastAPI serves as the backend REST framework that powers API endpoints for document processing,conversational AI interactions,policy recommendations,civic engagement tools,and vector embedding. It is optimized for asynchronous performance and easy Swagger integration.
+LLM INTEGRATION(IBM WATSONX GRANITE): 
+
+Granite LLM models IBM Watsonx ar used for natural language understanding and generation. prompts are carefully designed to generate citizen_friendly summaries, explain policies,provide recommendations, and support interactive AI_driven civic engagement.
+VECTOR SEARCH(PINECONE):
+
+Uploaded civic documents,regulations,or public policies are embedded using Sentence Transformers and stored in pinecone. Semantic search is implemented using cosine similarity to allow citizens and policymakers to search documents using natural language queries.
+ML MODULES(FORECASTING AND ANOMALY DETECTION):
+
+Lightweight ML modules are used for forecasting social,environmental,and civic trends, as well as anomaly detection in public datasets(e.g., unusual spikes in feedback or resources allocation). Scikit_learn powers the models,and results are visualized using pandas and matplotlib.
+
+4.setup instructions
+
+Precords, or datasets) and interact with the Citizen AI modules
+rerequisites:
+
+python 3.9 or later
+pip and virtual environment tools
+API keys for Citizen AI services(language model, vector database)
+Internet acess to connect with cloud services
+INSTALLATION PROCESS:
+Clone the respository
+Install dependencies from requirements.txt
+Create a .env file and configure your Citizen AI credentials
+Run the backend server using FastAPI
+Launch the frontend via Streamlit
+Upload data(e.g., document, 
+5.FOLDER STRUCTURE
+
+APP/ - Contains all FastAPI backend logic including routers, models, and integration modules.
+APP/API/- subdirectory for modular API routes such as chat, feedback,knowledge, and document processing.
+UI/-Contains frontend components for Streamlit pages, layouts, and interactive forms.
+CITIZEN_DASHBOARD.py-Entry script for launching the main Citizen AI dashboard with Streamlit.
+6.RUNNUING THE APPLICATION
+
+To start the project:
+
+Launch the fastAPI server to expose backend endpoint
+Run the streamlit dashboard to access the citizen AI web interface.
+Navigate through pages via the sidebar menu.
+Upload documents or datasets interact with the AI assistant and views outputs.
+7.API Documentation:
+
+POST/chat/ask - citizen can submit an query and AI- generated response in plain, easy-to-understand language.
+POST/upload-doc - uploads community or policy-related documents for embedding into the citizen AI.
+GET/search-docs - Return policies, guideliness,or sign documents that match the citizen's query.
+GET/get-eco-tips - Provides practical, sustainability tips for areas like energy, water, or waste management.
+POST/submit-feedback - Stores citizen feedback for review, community engagement, and policy improvement.
+8.Authentication:
+
+Token- based authentication( JWT or API keys)
+OAuth2 with trusted cloud crendentials.
+Role-based access (citizen, communityadmin, Researchers,policy maker)
+Future enchancements:human sessions, history tracking andpersonalized eco-tip recommendations.
+
+9.User Interface:
+
+ Sidebar with  simple navigation.
+Dashboard with visualized  communtiy impact( KPI cards)
+Tabbed layouts for chat, eco- tips,policy forecasts.
+Real- time form handling for quick citizen feedback.
+PDF report download for offline use and community sharing.
+10.Testing: 
+
+Citizen AI undergoes multi-phase testing to ensure trust, reliability,and fairness:
+Unit Testing _ ensure prompt functions and scripts respond accurately.
+API Testing _ verified via swagger UI,postman,and automated test scripts.
+Manual Testing _ validated by  uploading community files, asking questions, and checking consitency of AI responses
+Edge case handling _  Tested against malformed inputs, large files and invalid API keys to ensure resilience
+Each features is validated for offline and online access,suporting with limited connectivity.
+     
